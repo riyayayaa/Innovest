@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Startup Profile | Innovest</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div><a href="explore.html" class="back-button">← Go Back</a>
+</div>
+  <div class="profile-wrapper">
+    <div class="profile-card">
+      <h1 id="startupName">[Startup Name]</h1>
+      <p id="startupDesc">[Description]</p>
+      <hr>
+      <p><strong>Founder Name:</strong> <span id="founderName"></span></p>
+      <p><strong>Email:</strong> <span id="founderEmail"></span></p>
+    </div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore-compat.js"></script>
+  <script src="js/firebase.js"></script>
+  <script src="js/profile.js"></script>
+</body>
+</html>

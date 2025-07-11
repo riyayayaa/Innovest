@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Innovest | Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="dashboard.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="dashboard-container">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="logo">Innovest</div>
+      <div class="profile">
+        <h3 id="userName">Name</h3>
+        <p id="userRole">Role</p>
+      </div>
+      <nav>
+        <a href="explore.html"><i class="fas fa-user"></i> Explore</a>
+        <a href="#"><i class="fas fa-briefcase"></i> My Startup / Portfolio</a>
+        <a href="#"><i class="fas fa-envelope"></i> Message</a>
+        <a href="#" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+      <h2 id="dashboardGreeting">Welcome back!</h2>
+
+      <!-- Profile Editing Section -->
+      <section class="card">
+        <h3>👤 Profile Info</h3>
+        <input type="text" id="editName" placeholder="Full Name" />
+        <input type="email" id="editEmail" placeholder="Email (readonly)" readonly />
+        <select id="editRole" disabled>
+          <option value="entrepreneur">Entrepreneur</option>
+          <option value="investor">Investor</option>
+          <option value="advisor">Advisor</option>
+        </select>
+        <button onclick="saveProfile()">Save Profile</button>
+      </section>
+
+      <!-- Role-Specific Dynamic Form -->
+      <section id="roleSection" class="card">
+        <!-- JS will inject entrepreneur, investor or advisor input fields -->
+      </section>
+    </main>
+  </div>
+
+  <!-- Firebase and Scripts -->
+  <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore-compat.js"></script>
+  <script src="js/firebase.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

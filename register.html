@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Innovest | Register</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+  <div class="login-container">
+    <div class="left-box">
+      <h2>Welcome Back!</h2>
+      <p>Already have an account?</p>
+      <a href="login.html" class="register-btn">Login</a>
+    </div>
+    <div class="right-box">
+      <h2>Create Account</h2>
+      <form class="login-form" id="registerForm">
+        <div class="input-group">
+          <input type="text" id="name" placeholder="Full Name" required>
+        </div>
+        <div class="input-group">
+          <input type="email" id="email" placeholder="Email" required>
+        </div>
+        <div class="input-group">
+          <select id="role" required>
+            <option value="" disabled selected>Select Role</option>
+            <option value="entrepreneur">Entrepreneur</option>
+            <option value="investor">Investor</option>
+            <option value="banker">Banker</option>
+            <option value="advisor">Advisor</option>
+          </select>
+        </div>
+        <div class="input-group">
+          <input type="password" id="password" placeholder="Password" required>
+        </div>
+        <div class="input-group">
+          <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+        </div>
+        <button type="submit" class="login-btn">Register</button>
+
+        <div class="social-login">
+          <p>or sign up with</p>
+          <div class="icons">
+            <a href="#"><img src="images/google.png" alt="G"></a>
+            <a href="#"><img src="images/facebook.png" alt="F"></a>
+            <a href="#"><img src="images/github.png" alt="GH"></a>
+            <a href="#"><img src="images/linkedin.png" alt="IN"></a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore-compat.js"></script>
+
+  <!-- Your Firebase configuration -->
+  <script src="js/firebase.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

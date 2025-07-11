@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Innovest | Login</title>
+  <link rel="stylesheet" href="login.css">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="login-container">
+    <div class="left-box">
+      <h2>Get Started</h2>
+      <p>Don't have an account?</p>
+      <a href="register.html" class="register-btn">Register</a>
+    </div>
+    <div class="right-box">
+      <h2>Login to Your Account</h2>
+      <form class="login-form" id="loginForm">
+        <div class="input-group">
+          <input type="email" id="loginEmail" placeholder="Email" required>
+        </div>
+        <div class="input-group">
+          <input type="password" id="loginPassword" placeholder="Password" required>
+        </div>
+        <a href="#" class="forgot" onclick="resetPassword()">Forgot Password?</a>
+        <button type="submit" class="login-btn">Login</button>
+
+        <div class="social-login">
+          <p>or login with</p>
+          <div class="icons">
+            <a href="#"><img src="images/google.png" alt="G"></a>
+            <a href="#"><img src="images/facebook.png" alt="F"></a>
+            <a href="#"><img src="images/github.png" alt="GH"></a>
+            <a href="#"><img src="images/linkedin.png" alt="IN"></a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore-compat.js"></script>
+
+  <!-- Firebase Config & Login Logic -->
+  <script src="js/firebase.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>

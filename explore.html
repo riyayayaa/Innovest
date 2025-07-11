@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Explore Startups | Innovest</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&display=swap" rel="stylesheet" />
+  <head>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+</head>
+
+</head>
+<body>
+  <!-- Fixed Navbar -->
+  <nav class="navbar">
+    <h1>Explore Startups</h1>
+    <button class="toggle-left" onclick="toggleLeftMenu()">
+  <i class="fas fa-sliders-h"></i>
+</button>
+
+  </nav>
+
+  <main class="explore-feed">
+    <div id="startupList" class="startup-list"></div>
+  </main>
+  <!-- Right Slide-Out Menu -->
+<aside class="left-panel" id="leftPanel">
+  <nav class="slide-nav">
+    <a href="dashboard.html"><i class="fas fa-briefcase"></i> My Startup/Portfolio</a>
+    
+  </nav>
+  
+</aside>
+
+
+  <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore-compat.js"></script>
+  <script src="js/firebase.js"></script>
+  <script src="js/explore.js"></script>
+  <script>
+  function toggleLeftMenu() {
+    const panel = document.getElementById('leftPanel');
+    panel.classList.toggle('open');
+  }
+</script>
+
+</body>
+</html>
